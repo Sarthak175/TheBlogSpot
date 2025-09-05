@@ -7,7 +7,9 @@ const PostCard = ({ post, onDelete, showActions = true, currentUser = 'current_u
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
     });
   };
 
@@ -51,7 +53,7 @@ const PostCard = ({ post, onDelete, showActions = true, currentUser = 'current_u
         <div className="post-footer">
           <div className="post-info">
             <span className="author">By {post.author}</span>
-            <span className="date">📅 {formatDate(post.createdAt)}</span>
+            <span className="date">🕰️ {formatDate(post.createdAt)}</span>
             <span className="reading-time">📖 {calculateReadingTime(post.content)} min read</span>
           </div>
           
