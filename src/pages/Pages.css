@@ -1,0 +1,185 @@
+.pages {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.pages h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+}
+
+.light-theme .pages h1 {
+  color: #1e293b;
+}
+
+.pages > .container > p {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 3rem;
+}
+
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.page-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.light-theme .page-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.page-card h3 {
+  color: #e2e8f0;
+  margin: 0 0 0.5rem 0;
+}
+
+.light-theme .page-card h3 {
+  color: #1e293b;
+}
+
+.page-card p {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.light-theme .page-card p {
+  color: #64748b;
+}
+
+.page-status {
+  margin-bottom: 1rem;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status.created {
+  background: #22c55e;
+  color: white;
+}
+
+.status.not-created {
+  background: #ef4444;
+  color: white;
+}
+
+.page-tips h2 {
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.light-theme .page-tips h2 {
+  color: #1e293b;
+}
+
+.page-tips ul {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.light-theme .page-tips ul {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.page-tips li {
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.light-theme .page-tips li {
+  color: #64748b;
+}
+
+.page-tips strong {
+  color: #3b82f6;
+}
+
+.page-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-editor {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.light-theme .page-editor {
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.page-editor h2 {
+  color: #e2e8f0;
+  margin: 0 0 1.5rem 0;
+}
+
+.light-theme .page-editor h2 {
+  color: #1e293b;
+}
+
+.editor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #0f0f0f;
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.light-theme .page-textarea {
+  background: #f8fafc;
+  border: 1px solid #d1d5db;
+  color: #1e293b;
+}
+
+.page-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-actions {
+    justify-content: center;
+  }
+  
+  .editor-actions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Posts collection rules
+    match /posts/{postId} {
+      // Allow read access to all posts
+      allow read: if true;
+      
+      // Allow create/update/delete only for authenticated users
+      allow create, update, delete: if request.auth != null;
+    }
+    
+    // Default rule - deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.post-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.share-quick-btn {
+  background: #333;
+  border: 1px solid #444;
+  color: #ccc;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-quick-btn:hover {
+  background: #444;
+}

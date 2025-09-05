@@ -1,0 +1,90 @@
+.pinned-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.post-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+}
+
+.stat-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+  transition: color 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.like-btn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.like-btn.liked {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.like-btn.liked:hover {
+  color: #888;
+  background: rgba(136, 136, 136, 0.1);
+}
+
+.stat-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.status-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.status-published {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.status-draft {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.status-archived {
+  background: rgba(107, 114, 128, 0.2);
+  color: #6b7280;
+}
+
+.post-timestamps {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.post-updated {
+  color: #6366f1;
+}
