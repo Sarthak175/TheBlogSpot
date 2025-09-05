@@ -1,16 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-
-// Scroll to top component
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
@@ -25,7 +14,6 @@ import PostView from './pages/PostView';
 import Category from './pages/Category';
 import Trending from './pages/Trending';
 import Bookmarks from './pages/Bookmarks';
-
 import Search from './pages/Search';
 import Dashboard from './pages/Dashboard';
 import Analytics from './pages/Analytics';
@@ -36,9 +24,19 @@ import Settings from './pages/Settings';
 import Layout from './pages/Layout';
 import Theme from './pages/Theme';
 import ReadingList from './pages/ReadingList';
-
 import { onAuthChange } from './firebase/auth';
 import { getAllPosts, createPost, updatePost, deletePost, incrementViews, toggleLike, toggleBookmark } from './firebase/firestore';
+
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 const App = () => {
   const [posts, setPosts] = useState([]);
