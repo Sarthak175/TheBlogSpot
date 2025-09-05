@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
@@ -193,6 +204,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={`App ${isDarkMode ? 'dark-theme' : 'light-theme'}`}>
         <Navbar 
           onSearch={handleSearch}
