@@ -10,13 +10,21 @@ const Home = ({ posts, onDeletePost, onViewPost, showToast, searchQuery, current
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  const categories = [
-    { name: 'Technology', slug: 'tech', count: 12 },
-    { name: 'Travel', slug: 'travel', count: 8 },
-    { name: 'Lifestyle', slug: 'lifestyle', count: 15 },
-    { name: 'Business', slug: 'business', count: 6 },
-    { name: 'Health', slug: 'health', count: 9 }
-  ];
+  // Calculate real categories from actual posts
+  const categoryStats = posts.reduce((acc, post) => {
+    const category = post.category || 'General';
+    if (!acc[category]) {
+      acc[category] = {
+        name: category,
+        slug: category.toLowerCase().replace(/\s+/g, '-'),
+        count: 0
+      };
+    }
+    acc[category].count++;
+    return acc;
+  }, {});
+
+  const categories = Object.values(categoryStats);
 
   useEffect(() => {
     // Show only current user's posts

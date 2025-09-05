@@ -22,7 +22,7 @@ const Sidebar = ({ posts, categories, onSubscribe }) => {
       <div className="sidebar-widget">
         <h3 className="widget-title">Categories</h3>
         <ul className="categories-list">
-          {categories.map((category, index) => (
+          {categories.filter(category => category.count > 0).map((category, index) => (
             <li key={index} className="category-item">
               <Link to={`/category/${category.name}`} className="category-link">
                 <span className="category-name">{category.name}</span>
