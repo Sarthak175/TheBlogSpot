@@ -129,7 +129,9 @@ const PostView = ({ posts, onViewPost, onLikePost, onAddComment, onTogglePin, sh
 
 
           <div className="post-content">
-            <p>{post.content}</p>
+            {post.content.split('\n').map((paragraph, index) => (
+              paragraph.trim() && <p key={index}>{paragraph}</p>
+            ))}
           </div>
 
           <div className="post-tags">
