@@ -40,13 +40,11 @@ const Sidebar = ({ posts, categories, onSubscribe }) => {
           {recentPosts.map(post => (
             <div key={post.id} className="sidebar-post">
               <img 
-                src={post.image || 'https://via.placeholder.com/60x60/333/666?text=P'} 
+                src={post.image || '/default-post.svg'} 
                 alt={post.title} 
                 className="sidebar-post-image"
-                loading="lazy"
-                style={{ backgroundColor: '#333' }}
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/60x60/333/666?text=P';
+                  e.target.src = '/default-post.svg';
                 }}
               />
               <div className="sidebar-post-content">
@@ -71,13 +69,11 @@ const Sidebar = ({ posts, categories, onSubscribe }) => {
           {popularPosts.map(post => (
             <div key={post.id} className="sidebar-post">
               <img 
-                src={post.image || 'https://via.placeholder.com/60x60/333/666?text=P'} 
+                src={post.image || '/default-post.svg'} 
                 alt={post.title} 
                 className="sidebar-post-image"
-                loading="lazy"
-                style={{ backgroundColor: '#333' }}
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/60x60/333/666?text=P';
+                  e.target.src = '/default-post.svg';
                 }}
               />
               <div className="sidebar-post-content">

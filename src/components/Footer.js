@@ -1,89 +1,52 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import React from 'react';
 
-const Footer = ({ onSubscribe }) => {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email.trim()) {
-      onSubscribe(email);
-      setEmail('');
-    }
-  };
-
+const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h3 className="footer-title">The Blog Spot</h3>
-            <p className="footer-description">
-              Discover amazing stories, insights, and ideas from our community of passionate writers.
-            </p>
-            <div className="social-links">
-              <a href="#" className="social-link" aria-label="Instagram">
-                📷
-              </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
-                💼
-              </a>
-              <a href="#" className="social-link" aria-label="Twitter">
-                🐦
-              </a>
-            </div>
-          </div>
-
-          <div className="footer-section">
-            <h4 className="footer-subtitle">Quick Links</h4>
-            <ul className="footer-links">
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms & Conditions</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4 className="footer-subtitle">Categories</h4>
-            <ul className="footer-links">
-              <li><Link to="/category/tech">Technology</Link></li>
-              <li><Link to="/category/travel">Travel</Link></li>
-              <li><Link to="/category/lifestyle">Lifestyle</Link></li>
-              <li><Link to="/category/business">Business</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4 className="footer-subtitle">Stay Connected</h4>
-            <p className="newsletter-text">
-              Subscribe to our newsletter for the latest updates
-            </p>
-            <form onSubmit={handleSubscribe} className="footer-newsletter">
-              <input
-                type="email"
-                placeholder="Enter your email..."
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="newsletter-input"
-                required
-              />
-              <button type="submit" className="btn btn-primary newsletter-btn">
-                Subscribe
-              </button>
-            </form>
+      <div className="footer-content">
+        <div className="footer-brand">
+          <h2>The Blog Spot</h2>
+          <p>Your go-to destination for insightful articles, creative stories, and engaging content across various topics.</p>
+          <div className="footer-icons">
+            <div className="footer-icon">📷</div>
+            <div className="footer-icon">💼</div>
+            <div className="footer-icon">✒️</div>
           </div>
         </div>
-
-        <div className="footer-bottom">
-          <p className="copyright">
-            © 2024 The Blog Spot. All rights reserved.
-          </p>
-          <p className="made-with">
-            Made with ❤️ for bloggers everywhere
-          </p>
+        
+        <div className="footer-section">
+          <h3>Quick Links</h3>
+          <ul className="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
         </div>
+        
+        <div className="footer-section">
+          <h3>Categories</h3>
+          <ul className="footer-links">
+            <li><a href="/category/technology">Technology</a></li>
+            <li><a href="/category/travel">Travel</a></li>
+            <li><a href="/category/lifestyle">Lifestyle</a></li>
+            <li><a href="/category/business">Business</a></li>
+          </ul>
+        </div>
+        
+        <div className="footer-section">
+          <h3>Stay Connected</h3>
+          <p style={{color: '#9ca3af', marginBottom: '16px'}}>Subscribe to get the latest updates</p>
+          <div className="footer-subscribe">
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      
+      <div className="footer-bottom">
+        <p>© 2024 The Blog Spot. All rights reserved.</p>
+        <p className="made-with-love">Made with ❤️ for bloggers everywhere.</p>
       </div>
     </footer>
   );

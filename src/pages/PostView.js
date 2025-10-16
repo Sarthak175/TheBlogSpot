@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './PostView.css';
 
-const PostView = ({ posts, onViewPost, onLikePost, onAddComment, onTogglePin, showToast, currentUser = 'current_user' }) => {
+const PostView = ({ posts, onViewPost, onLikePost, onAddComment, onTogglePin, onBookmarkPost, showToast, currentUser = 'current_user' }) => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
@@ -142,16 +142,21 @@ const PostView = ({ posts, onViewPost, onLikePost, onAddComment, onTogglePin, sh
 
           <div className="post-actions">
             <button 
-              className={`action-btn like-btn ${post.likedBy?.includes(currentUser) ? 'liked' : ''}`}
-              onClick={() => onLikePost(post.id)}
+              className="btn btn-primary edit-post-btn"
+              onClick={() => navigate(`/edit/${post.id}`)}
             >
-              {post.likedBy?.includes(currentUser) ? '❤️' : '🤍'} {post.likes} {post.likes === 1 ? 'Like' : 'Likes'}
+              ✏️ Edit Post
             </button>
-            <span className="views">👁️ {post.views} Views</span>
+            <button 
+              className={`action-btn bookmark-btn ${post.bookmarkedBy?.includes(currentUser) ? 'bookmarked' : ''}`}
+              onClick={() => onBookmarkPost && onBookmarkPost(post.id)}
+            >
+              {post.bookmarkedBy?.includes(currentUser) ? '🔖' : '🔗'} Bookmark
+            </button>
             {(post.authorId === currentUser || currentUser === 'admin') && (
               <button 
                 className={`action-btn pin-btn ${post.isPinned ? 'pinned' : ''}`}
-                onClick={() => onTogglePin(post.id)}
+                onClick={() => onTogglePin && onTogglePin(post.id)}
               >
                 {post.isPinned ? '📌 Unpin' : '📌 Pin'}
               </button>

@@ -67,7 +67,7 @@ const Category = ({ posts, onDeletePost, onLikePost, onTogglePin, onBookmarkPost
                     onLike={onLikePost}
                     onTogglePin={onTogglePin}
                     onBookmark={onBookmarkPost}
-                    showActions={post.authorId === currentUser || currentUser === 'admin'}
+                    showActions={true}
                     currentUser={currentUser}
                   />
                 ))}

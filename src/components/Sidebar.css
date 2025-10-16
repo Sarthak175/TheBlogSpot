@@ -82,7 +82,12 @@
 }
 
 .sidebar-post-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
   border: 1px solid #444;
+  flex-shrink: 0;
 }
 
 .sidebar-post-content {
@@ -158,6 +163,23 @@
     max-width: 100%;
     margin-top: 40px;
   }
+}
+
+/* Light theme styles for sidebar */
+body.light-theme .sidebar-post-title {
+  color: #1f2937 !important;
+}
+
+body.light-theme .sidebar-post-meta {
+  color: #6b7280 !important;
+}
+
+body.light-theme .category-name {
+  color: #374151 !important;
+}
+
+body.light-theme .newsletter-description {
+  color: #4b5563 !important;
 }
 
 @media (max-width: 768px) {
