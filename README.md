@@ -24,7 +24,15 @@ npm install
 npm start
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Open https://the-blog-spot-six.vercel.app/ to view it in the browser.
+
+## ScreenShots
+<img width="1891" height="993" alt="image" src="https://github.com/user-attachments/assets/1617301c-9642-4ffb-be87-125fa343509f" />
+<img width="1911" height="987" alt="image" src="https://github.com/user-attachments/assets/c2514f9c-2ee5-440e-be22-828d017bf3d4" />
+<img width="1903" height="991" alt="image" src="https://github.com/user-attachments/assets/04ad0df2-cc60-4101-93e4-36818412f2b5" />
+<img width="1906" height="992" alt="image" src="https://github.com/user-attachments/assets/a8680f25-d762-4293-b609-d8c59ded46d0" />
+
+
 
 ## Project Structure
 
