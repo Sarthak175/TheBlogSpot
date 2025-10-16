@@ -1,6 +1,7 @@
 # The Blog Spot
 
 A clean, minimal blog application built with React featuring responsive design and modern UI components.
+Open https://the-blog-spot-six.vercel.app/ to view it in the browser.
 
 ## Features
 
@@ -23,8 +24,6 @@ npm install
 ```bash
 npm start
 ```
-
-3. Open https://the-blog-spot-six.vercel.app/ to view it in the browser.
 
 ## ScreenShots
 <img width="1891" height="993" alt="image" src="https://github.com/user-attachments/assets/1617301c-9642-4ffb-be87-125fa343509f" />
